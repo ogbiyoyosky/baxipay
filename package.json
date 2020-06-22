@@ -1,0 +1,82 @@
+{
+  "name": "baxipay-node-sdk",
+  "version": "1.0.0",
+  "description": "A NodeJs Wrapper for Baxipay APIs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run watch-ts",
+    "build-ts": "tsc -p src",
+    "quick-build": "npm run build-ts && npm run serve",
+    "serve": "SET NODE_ENV=development && node dist/src/server.js",
+    "start-dev": "SET NODE_ENV=development && nodemon dist/src/server.js",
+    "lint": "tslint src/**/*.ts -p tsconfig.json",
+    "lint:fix": "tslint --fix -c tslint.json 'src/**/*{.ts}",
+    "test": "cross-env NODE_ENV=test nyc --reporter=html ts-mocha --timeout 20000  -p  src/tsconfig.json --recursive src/**/*.test.ts",
+    "test:integration": "cross-env NODE_ENV=test  ts-mocha --timeout 20000  -p  src/tsconfig.json src/test/unit/*.test.ts --exit",
+    "coverage": "nyc npm run test:integration",
+    "watch-ts": "tsc-watch  --outDir ./dist --onSuccess \"npm run serve\" --lib ES2015 --skipLibCheck"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts",
+      "src/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "typings"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "text-summary"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "all": true
+  },
+  "keywords": [
+    "baxipay",
+    "payments",
+    "nodejs",
+    "api-endpoints",
+    "rest-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ogbiyoyosky/ogbiyoyosky/baxipay-node"
+  },
+  "author": "Emmanuel Ogbiyoyo <nuel@nueljoe.com> (https://nueljoe.com",
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "5.12.1",
+    "typescript": "3.3.3",
+    "@types/chai": "^4.1.7",
+    "@types/chai-http": "^3.0.5",
+    "@types/lodash": "^4.14.71",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^13.13.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "concurrently": "^3.5.0",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^13.1.0",
+    "supertest": "^3.3.0",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^8.9.0",
+    "http-status": "^1.3.1",
+    "jest": "^23.6.0",
+    "ts-mocha": "^2.0.0"
+  },
+
+  "dependencies": {
+    "got": "^11.3.0",
+    "cross-env": "^7.0.2"
+  }
+}
