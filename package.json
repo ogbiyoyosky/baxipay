@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run watch-ts",
-    "build-ts": "tsc -p src",
+    "build-ts": "tsc  && cp package.json dist/ && cp README.md dist/ && cp LICENSE dist/",
     "quick-build": "npm run build-ts && npm run serve",
     "serve": "SET NODE_ENV=development && node dist/src/server.js",
     "start-dev": "SET NODE_ENV=development && nodemon dist/src/server.js",
