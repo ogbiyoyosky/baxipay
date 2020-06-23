@@ -9,7 +9,7 @@ import Request from "../request"
  * file that was distributed with this source code.
  */
 
-class Data {
+class Electricity {
     apiKey: string;
   
     
@@ -18,11 +18,11 @@ class Data {
     }
 
      /**
-     * @method fetchaDataBundleProviders - fetch all data bundle providers
+     * @method fetchDataElectricityProviders - Gets various types of electricity billers
      * @return <Promise>
      */
-    fetchDataBundleProviders() {
-        const url: string = 'https://payments.baxipay.com.ng/api/baxipay/services/databundle/providers'
+    fetchDataElectricityProviders() {
+        const url: string = 'https://payments.baxipay.com.ng/api/baxipay/services/electricity/billers'
         return new Promise((resolve, reject ) => {
             return new Request()
             .headers({
@@ -36,20 +36,18 @@ class Data {
         })
     }
     
-
     /**
-     * @method fetchDataBundle -Fetches Available Network Bundles for Bundle Providers
+     * @method fetchDataBundle -Verify a user before making an electricity payment
      * @param serviceType - This is the service you are trying fetch its bundles e.g mtn, airtel, glo, 9mobile
+     * @param accountNumber - User Meter Number
      */
-    fetchDataBundle(serviceType: string) {
-        const payload: {
-            service_type: string
-
-        } = {
-            service_type: serviceType
+    verifyAccount(serviceType: string, accountNumber: string) {
+        const payload = {
+            service_type: serviceType,
+            account_number: accountNumber
         }
 
-        const url: string = 'https://payments.baxipay.com.ng/api/baxipay/services/databundle/bundles'
+        const url: string = 'https://payments.baxipay.com.ng/api/baxipay/services/electricity/verify'
         return new Promise((resolve, reject ) => {
             return new Request()
             .headers({
@@ -67,23 +65,22 @@ class Data {
 
 
     /**
-     * @method requestDataBundle  Purchase data bundle from MTN, AIRTEL, GLO, 9MOBILE, SMILE
-     * @param {String} phone 
+     * @method requestElectricity - Make an electricity purchase request
+     * @param {String} accountNumber -
      * @param {Number} amount 
+     * @param {String} phone 
      * @param {String} serviceType 
-     * @param {String} dataCode 
      * @param {Number} agentId 
      * @param {String} agentReference 
      */
-    requestDataBundle(phone: string, amount: string, serviceType: string,dataCode: string, agentId: number, agentReference: string) {
+    requestElectricity (accountNumber: string, amount: Number, phone: string, serviceType: string,  agentId: number, agentReference: string) {
         const payload ={
+            account_number: accountNumber,
             service_type: serviceType,
             phone,
             amount,
-            datacode: dataCode,
             agentId,
             agentReference
-
         }
 
         const url: string = 'https://payments.baxipay.com.ng/api/baxipay/services/multichoice/addons'
@@ -93,16 +90,13 @@ class Data {
                 "Baxi-date": new Date().toISOString(),
                 "x-api-key": this.apiKey,
                 "X-CSRF-Token": "",
-              })
+            })
             .acceptJson()
             .post(url, payload)
             .then(resolve)
             .catch(reject);
         })
     }
-
-
-    
 } 
 
-export default Data;
+export default Electricity;
