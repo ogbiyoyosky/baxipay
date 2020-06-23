@@ -5,6 +5,11 @@
 - VTU
 - Biller
 - Verify
+- Cable
+- Data
+- Electricity
+- ePin
+- Verify
 
 Visit the [Baxipay Website](https://www.baxipay.com.ng/) to get a full overview of the services listed above.
 
