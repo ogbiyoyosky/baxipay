@@ -85,6 +85,22 @@ Operations relating to Data Bundles
 
 `const result = await baxipay.data.requestDataBundle("07035361770", 200, "mtn", "200", 207,"AX14s68P2Z");`
 
+### Electricity
+
+Operations relating to purchase of electricity services
+
+###### Gets various types of electricity billers
+
+`const result = await baxipay.electricity.fetchDataElectricityProviders();`
+
+###### Retrieves available pin bundle types (9Mobile, Glo, Waec, Bulksms, Spectranet)
+
+`const result = await baxipay.electricity.verifyAccount("ikeja_electric_prepaid","04042404048");`
+
+###### Purchase available pin bundle types (9Mobile, Glo, Waec, Bulksms, Spectranet)
+
+`const result = await baxipay.electricity.requestElectricity("04042404048", 2000, "08012345678", "ikeja_electric_prepaid", 205,"ASF33309d458");`
+
 ### Contributing
 
 - You can contribute by extending the README file to contain more examples and explanations of how to use the package
