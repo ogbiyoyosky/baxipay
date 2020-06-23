@@ -55,6 +55,20 @@ Operations relating to Cable TV Subscriptions
 
 ###### Retrieves cable tv providers and thier codes
 
+`const result = await baxipay.cable.fetchCableProviders();`
+
+###### Retrieves subscription bundles for Cable TV product
+
+`const result = await baxipay.cable.multichoiceList("dstv");`
+
+###### Retrieves Addons that can be added along side the selected subscription bundle.
+
+`const result = await baxipay.cable.multichoiceAddon("dstv", "ACSSE36");`
+
+###### Cable TV Subscription for Multichoice Only (DSTV, GOTV)
+
+`const result = await baxipay.cable.multichoiceRequest("dstv","NLTESE36", 1122334455, 4200, "1","HDPVRE36","1",207,"AX14s63P2k")`
+
 ### Contributing
 
 - You can contribute by extending the README file to contain more examples and explanations of how to use the package
