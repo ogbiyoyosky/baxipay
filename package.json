@@ -1,5 +1,5 @@
 {
-  "name": "baxipay-node-sdk",
+  "name": "baxipay",
   "version": "1.0.0",
   "description": "A NodeJs Wrapper for Baxipay APIs",
   "main": "index.js",
