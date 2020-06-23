@@ -5,6 +5,8 @@ import Biller from "./src/endpoints/biller";
 import Verify from "./src/endpoints/verify"
 import Cable from "./src/endpoints/cable";
 import Data from "./src/endpoints/data";
+import Epin from "./src/endpoints/epin";
+import Electricity from "./src/endpoints/electricity";
 
 
 /*
@@ -32,6 +34,8 @@ class BaxiPay implements BaxiPayInterface {
     public account
     public cable
     public data
+    public epin
+    public electricity
 
     constructor (apiKey: string) {
         this.apiKey = apiKey;
@@ -40,6 +44,8 @@ class BaxiPay implements BaxiPayInterface {
         this.account = new Verify(apiKey)
         this.cable = new Cable(apiKey)
         this.data = new Data(apiKey)
+        this.epin = new Epin(apiKey)
+        this.electricity = new Electricity(apiKey)
     }
 }
 
