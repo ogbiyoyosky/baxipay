@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-import got, { Method, Options } from 'got';
+import axios from 'axios';
 import {RequestInterface} from './interfaces/request.interface'
 
 class Request implements RequestInterface {
@@ -103,19 +103,25 @@ class Request implements RequestInterface {
    *
    * @return {void}
    */
-  async post(url: string, body, method:Method = "post") {
+  async post(url: string, body, method = "post") {
     const headers = this._auth
       ? Object.assign({ Authorization: this._auth }, this._headers)
       : this._headers;
 
+      let options: Object = {
+        headers
+      }
+      
     try {
-      const response = await got(url, {
-        headers,
-        body,
-        method,
-        json: this._isJson,
-      });
-
+      let response
+      if(method == 'post') {
+        response = await axios.post(url, body, options, )
+        console.log({response})
+      } else {
+       
+        response = await axios.get(url, options)
+      }
+    
       return response;
     } catch ({ response, message }) {
 
@@ -127,4 +133,4 @@ class Request implements RequestInterface {
   }
 }
 
-module.exports = Request;
+export default Request
