@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import BaxiPay from "../../../index"
 require('ts-mocha');
-const baxipay = new BaxiPay("5adea9-044a85-708016-7ae662-646d59", "hello")
+const baxipay = new BaxiPay("5adea9-044a85-708016-7ae662-646d59")
 
 
 describe('Billers', () => {
-    describe('GET /Billers', () => {
+    describe('Billers Processing', () => {
         it('Should fetch all billers providers', async () => {
             const result = await baxipay.biller.fetchBillerProviders();
         });

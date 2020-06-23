@@ -3,6 +3,8 @@
 import MobileAirtime from "./src/endpoints/vtu";
 import Biller from "./src/endpoints/biller";
 import Verify from "./src/endpoints/verify"
+import Cable from "./src/endpoints/cable";
+import Data from "./src/endpoints/data";
 
 
 /*
@@ -28,13 +30,16 @@ class BaxiPay implements BaxiPayInterface {
     public vtu;
     public biller
     public account
+    public cable
+    public data
 
-    constructor (apiKey: string, apiSecret: string) {
+    constructor (apiKey: string) {
         this.apiKey = apiKey;
-        this.apiSecret = apiSecret
-        this.vtu = new MobileAirtime(apiKey, apiSecret)
-        this.biller = new Biller(apiKey, apiSecret)
-        this.account = new Verify(apiKey, apiSecret)
+        this.vtu = new MobileAirtime(apiKey)
+        this.biller = new Biller(apiKey)
+        this.account = new Verify(apiKey)
+        this.cable = new Cable(apiKey)
+        this.data = new Data(apiKey)
     }
 }
 

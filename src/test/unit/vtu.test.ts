@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import BaxiPay from "../../../index"
 require('ts-mocha');
-const baxipay = new BaxiPay("5adea9-044a85-708016-7ae662-646d59", "hello")
+const baxipay = new BaxiPay("5adea9-044a85-708016-7ae662-646d59")
 
 
 describe('USER', () => {
-    describe('GET /Airtime', () => {
+    describe('Airtime Processing', () => {
         it('Should fetch all vtu airtime provider', async () => {
             const result = await baxipay.vtu.fetchProviders();
         });
@@ -15,5 +15,4 @@ describe('USER', () => {
         });
 
     })
-
 })
