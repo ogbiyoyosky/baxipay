@@ -67,7 +67,23 @@ Operations relating to Cable TV Subscriptions
 
 ###### Cable TV Subscription for Multichoice Only (DSTV, GOTV)
 
-`const result = await baxipay.cable.multichoiceRequest("dstv","NLTESE36", 1122334455, 4200, "1","HDPVRE36","1",207,"AX14s63P2k")`
+`const result = await baxipay.cable.multichoiceRequest("dstv","NLTESE36", 1122334455, 4200, "1","HDPVRE36","1",207,"AX14s63P2k");`
+
+### Data Bundle
+
+Operations relating to Data Bundles
+
+###### Retrieves databundle providers and their codes
+
+`const result = await baxipay.data.fetchDataBundleProviders();`
+
+###### Fetches Available Network Bundles for Bundle Providers
+
+`const result = await baxipay.data.fetchDataBundle("mtn");`
+
+###### Purchase data bundle from MTN, AIRTEL, GLO, 9MOBILE, SMILE
+
+`const result = await baxipay.data.requestDataBundle("07035361770", 200, "mtn", "200", 207,"AX14s68P2Z");`
 
 ### Contributing
 
