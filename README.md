@@ -33,6 +33,28 @@ Operations relating to Airtime recharge
 
 `const result = await baxipay.vtu.requestAirtime('07035361770',500,'mtn',207,'prepaid','AX497P2Z');`
 
+#### Biller
+
+Activities that has to do basic information about billers
+
+###### Gets the list of all billers
+
+`const result = await baxipay.biller.fetchBillerProviders();`
+
+###### Gets the list of all biller products.
+
+`const result = await baxipay.biller.fetchBillerServiceList();`
+
+###### Gets various types of billers category
+
+`const result = await baxipay.biller.fetchBillerCategories();`
+
+#### Cable
+
+Operations relating to Cable TV Subscriptions
+
+###### Retrieves cable tv providers and thier codes
+
 ### Contributing
 
 - You can contribute by extending the README file to contain more examples and explanations of how to use the package
