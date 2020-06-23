@@ -101,6 +101,22 @@ Operations relating to purchase of electricity services
 
 `const result = await baxipay.electricity.requestElectricity("04042404048", 2000, "08012345678", "ikeja_electric_prepaid", 205,"ASF33309d458");`
 
+### ePin
+
+Operations relating to purchase of ePin services
+
+###### Retrieves epin providers and their service type codes
+
+`const result = await baxipay.epin.fetchEpinProviders();`
+
+###### Retrieves available pin bundle types (9Mobile, Glo, Waec, Bulksms, Spectranet)
+
+`const result = await baxipay.epin.fetchEpinBundle("glo");`
+
+###### Purchase available pin bundle types (9Mobile, Glo, Waec, Bulksms, Spectranet)
+
+`const result = await baxipay.epin.requestEpinBundle("glo",1,100, 100, 207,"AX14s68P2Z");`
+
 ### Contributing
 
 - You can contribute by extending the README file to contain more examples and explanations of how to use the package
