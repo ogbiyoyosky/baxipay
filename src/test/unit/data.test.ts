@@ -7,7 +7,7 @@ const baxipay = new BaxiPay("5adea9-044a85-708016-7ae662-646d59")
 describe('Data', () => {
     describe('Data processing', () => {
         it('Should fetch all  data bundle provider', async () => {
-            const result = await baxipay.data.fetchaDataBundleProviders();
+            const result = await baxipay.data.fetchDataBundleProviders();
         });
 
         it('Should fetch data bundle from provider', async () => {
