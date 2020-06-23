@@ -116,9 +116,8 @@ class Request implements RequestInterface {
       let response
       if(method == 'post') {
         response = await axios.post(url, body, options, )
-        console.log({response})
+        console.log({ response })
       } else {
-       
         response = await axios.get(url, options)
       }
     

@@ -11,11 +11,9 @@ import Request from "../request"
 
 class Verify {
     apiKey: string;
-    apiSecret: string;
     
-    constructor(apiKey: string, apiSecret: string) {
+    constructor(apiKey: string) {
         this.apiKey = apiKey
-        this.apiSecret = apiSecret
     }
     
 

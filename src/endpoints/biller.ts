@@ -11,11 +11,10 @@ import Request from "../request"
 
 class Biller {
     apiKey: string;
-    apiSecret: string;
+
     
-    constructor(apiKey: string, apiSecret: string) {
+    constructor(apiKey: string) {
         this.apiKey = apiKey
-        this.apiSecret = apiSecret
     }
 
     /**
