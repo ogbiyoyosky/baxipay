@@ -17,8 +17,6 @@ describe('Data', () => {
         it('Should Request data from the provider.', async () => {
             const result = await baxipay.data.requestDataBundle("07035361770", 200, "mtn", "200", 207,"AX14s68P2Z");
         });
-
-
     })
 
 })
