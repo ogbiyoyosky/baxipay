@@ -23,9 +23,30 @@ interface BaxiPayInterface {
     apiSecret: string
     vtu: MobileAirtime
 }
+
+
+const proxyHandler = {
+  get(target, name) {
+      if(!target.hasOwnProperty(name)) {
+          throw new Error(`${name} is not a vali methos no Baxipay`)
+      }
+    /**
+     * if node is inspecting then stick to target properties
+     */
+    if (typeof name === "symbol" || name === "inspect") {
+      return target[name];
+    }
+
+    return target[name];
+  },
+};
+
+
 /**
  * @class Baxipay - parent class for all categories of baxipay
  */
+
+ 
 class BaxiPay implements BaxiPayInterface {
     public apiKey;
     public apiSecret;
@@ -46,7 +67,12 @@ class BaxiPay implements BaxiPayInterface {
         this.data = new Data(apiKey)
         this.epin = new Epin(apiKey)
         this.electricity = new Electricity(apiKey)
+        return new Proxy(this, proxyHandler);
+
     }
 }
 
 export default BaxiPay;
+
+
+
