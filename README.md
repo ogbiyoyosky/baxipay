@@ -1,4 +1,14 @@
-# Baxipay Nodejs Library
+## Baxipay
+
+![Build Status](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
+![GitHub repo size](https://img.shields.io/github/repo-size/Vectormike/baxipay)
+![GitHub contributors](https://img.shields.io/github/contributors/Vectormike/baxipay)
+![Twitter Follow](https://img.shields.io/twitter/follow/Vectormike_?style=social)
+
+<!-- <a href="https://www.npmjs.com/package/baxipay" target="_blank"><img src="https://img.shields.io/npm/v/baxipay.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/package/express-generator-typescript" target="_blank"><img src="https://img.shields.io/npm/dm/baxipay.svg" alt="NPM Downloads" /></a> -->
+
+Nodejs API wrapper for [Baxipay]()
 
 ## Baxipay Endpoints/Services exposed by the library
 
@@ -124,4 +134,15 @@ Operations relating to purchase of ePin services
 
 ### Contributing
 
-- You can contribute by extending the README file to contain more examples and explanations of how to use the package
+- You can contribute by extending the README file to contain more examples and explanations of how to use the package.
+
+### Authors
+
+- [Emmanuel Ogbiyoyo](https://www.linkedin.com/in/emmanuel-ogbiyoyo-36b044168/?originalSubdomain=ng)
+  nuel@nueljoe.com
+- [Victor Jonah](https://www.linkedin.com/in/victor-jonah/) victorjonah199@gmail.com
+
+### License
+
+The code is available as open source under the terms of the
+[MIT License](https://opensource.org/licenses/MIT)
