@@ -6,6 +6,7 @@
 <a href="https://www.npmjs.com/package/express-generator-typescript" target="_blank"><img src="https://img.shields.io/npm/dm/baxipay.svg" alt="NPM Downloads" /></a> -->
 
 <a href="https://www.npmjs.com/package/express-generator-typescript" target="_blank"><img src="https://img.shields.io/npm/l/express-generator-typescript.svg" alt="Package License" /></a>
+
 Nodejs API wrapper for [Baxipay]()
 
 ## Baxipay Endpoints/Services exposed by the library
