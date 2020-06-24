@@ -1,11 +1,12 @@
 ## Baxipay
 
 ![Build Status](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
+![GitHub repo size](https://img.shields.io/github/repo-size/Vectormike/baxipay)
+![GitHub contributors](https://img.shields.io/github/contributors/Vectormike/baxipay)
+![Twitter Follow](https://img.shields.io/twitter/follow/Vectormike_?style=social)
 
 <!-- <a href="https://www.npmjs.com/package/baxipay" target="_blank"><img src="https://img.shields.io/npm/v/baxipay.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/package/express-generator-typescript" target="_blank"><img src="https://img.shields.io/npm/dm/baxipay.svg" alt="NPM Downloads" /></a> -->
-
-<a href="https://www.npmjs.com/package/express-generator-typescript" target="_blank"><img src="https://img.shields.io/npm/l/express-generator-typescript.svg" alt="Package License" /></a>
 
 Nodejs API wrapper for [Baxipay]()
 
