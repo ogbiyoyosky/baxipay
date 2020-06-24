@@ -1,6 +1,6 @@
 ## Baxipay
 
-![Build Status](https://img.shields.io/badge/GitHub_Actions-success-success.svg?logo=github&logoColor=white)
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://circleci.com/gh/circleci/circleci-docs)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Vectormike/baxipay)
 ![GitHub contributors](https://img.shields.io/github/contributors/Vectormike/baxipay)
 ![Twitter Follow](https://img.shields.io/twitter/follow/Vectormike_?style=social)
