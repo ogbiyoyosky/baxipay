@@ -6,7 +6,7 @@
 ![Twitter Follow](https://img.shields.io/twitter/follow/Vectormike_?style=social)
 
 <a href="https://www.npmjs.com/package/baxipay" target="_blank"><img src="https://img.shields.io/npm/v/baxipay.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/package/" target="_blank"><img src="https://img.shields.io/npm/dm/baxipay.svg" alt="NPM Downloads" /></a>
+<a href="https://www.npmjs.com/package/baxipay" target="_blank"><img src="https://img.shields.io/npm/dm/baxipay.svg" alt="NPM Downloads" /></a>
 
 Nodejs API wrapper for [Baxipay]()
 
